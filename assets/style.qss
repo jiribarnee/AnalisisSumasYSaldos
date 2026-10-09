@@ -1,0 +1,288 @@
+/* ==========================================================
+   Análisis Mensual de Sumas y Saldos — Tema azul marino / turquesa
+   ========================================================== */
+
+QMainWindow, QWidget {
+    background-color: #0b1220;
+    color: #e5eaf3;
+    font-family: "Segoe UI", "Inter", sans-serif;
+    font-size: 14px;
+}
+
+/* ---------- Pantalla de selección ---------- */
+
+#selectionCard {
+    background-color: #111a2e;
+    border-radius: 18px;
+    border: 1px solid #22314a;
+}
+
+#titleLabel {
+    font-size: 24px;
+    font-weight: 800;
+    color: #f4f7fb;
+}
+
+#subtitleLabel {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+#fieldLabel {
+    font-size: 13px;
+    font-weight: 700;
+    color: #cbd5e1;
+}
+
+#smallLabel {
+    font-size: 12px;
+    color: #7d8ba1;
+}
+
+QLineEdit {
+    background-color: #0b1220;
+    border: 1.5px solid #22314a;
+    border-radius: 9px;
+    padding: 9px 12px;
+    color: #e5eaf3;
+    selection-background-color: #2dd4bf;
+    selection-color: #0b1220;
+}
+
+QLineEdit:focus {
+    border: 1.5px solid #2dd4bf;
+}
+
+#browseButton {
+    background-color: #1c2c47;
+    border: none;
+    border-radius: 9px;
+    padding: 9px 16px;
+    color: #e5eaf3;
+    font-weight: 700;
+}
+
+#browseButton:hover {
+    background-color: #26385a;
+}
+
+#primaryButton {
+    background-color: #2dd4bf;
+    border: none;
+    border-radius: 11px;
+    color: #06251f;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+#primaryButton:hover {
+    background-color: #5eead4;
+}
+
+#primaryButton:pressed {
+    background-color: #14b8a6;
+}
+
+#secondaryButton {
+    background-color: #111a2e;
+    border: 1.5px solid #22314a;
+    border-radius: 9px;
+    padding: 8px 16px;
+    color: #cbd5e1;
+    font-weight: 700;
+}
+
+#secondaryButton:hover {
+    background-color: #1c2c47;
+}
+
+#statusLabel {
+    color: #f5b942;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+#addPeriodButton {
+    background-color: #111a2e;
+    border: 1.5px dashed #2dd4bf;
+    border-radius: 9px;
+    padding: 9px;
+    color: #2dd4bf;
+    font-weight: 700;
+}
+
+#addPeriodButton:hover {
+    background-color: #12271f;
+}
+
+#addPeriodButton:disabled {
+    border: 1.5px dashed #334155;
+    color: #64748b;
+}
+
+#removeButton {
+    background-color: #2a1620;
+    border: none;
+    border-radius: 12px;
+    color: #f87171;
+    font-weight: 800;
+}
+
+#removeButton:hover {
+    background-color: #3a1c28;
+}
+
+/* ---------- Dashboard ---------- */
+
+#dashboardTitle {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f4f7fb;
+}
+
+#summaryCard {
+    background-color: #111a2e;
+    border-radius: 14px;
+    border: 1px solid #22314a;
+    border-top: 3px solid #2dd4bf;
+}
+
+#cardTitle {
+    font-size: 11px;
+    font-weight: 800;
+    color: #7d8ba1;
+    letter-spacing: 0.5px;
+}
+
+#cardValue {
+    font-size: 20px;
+    font-weight: 800;
+    color: #f4f7fb;
+}
+
+#cardValue[variant="positivo"] {
+    color: #2dd4bf;
+}
+
+#cardValue[variant="negativo"] {
+    color: #f87171;
+}
+
+#searchInput {
+    max-width: 420px;
+}
+
+/* ---------- Pestañas ---------- */
+
+QTabWidget#mainTabs::pane {
+    border: 1px solid #22314a;
+    border-radius: 12px;
+    background-color: #111a2e;
+    top: -1px;
+}
+
+QTabBar::tab {
+    background-color: #111a2e;
+    color: #7d8ba1;
+    padding: 10px 20px;
+    margin-right: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid #22314a;
+    border-bottom: none;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+QTabBar::tab:selected {
+    background-color: #2dd4bf;
+    color: #06251f;
+    border: 1px solid #2dd4bf;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #1c2c47;
+}
+
+QComboBox {
+    background-color: #0b1220;
+    border: 1.5px solid #22314a;
+    border-radius: 9px;
+    padding: 7px 12px;
+    color: #e5eaf3;
+}
+
+QComboBox:hover {
+    border: 1.5px solid #2dd4bf;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #111a2e;
+    color: #e5eaf3;
+    selection-background-color: #2dd4bf;
+    selection-color: #06251f;
+    border: 1px solid #22314a;
+}
+
+/* ---------- Tabla ---------- */
+
+QTableWidget#resultsTable {
+    background-color: #111a2e;
+    border: 1px solid #22314a;
+    border-radius: 12px;
+    gridline-color: #1c2c47;
+    alternate-background-color: #0f1830;
+}
+
+QTableWidget#resultsTable::item {
+    padding: 8px;
+    border: none;
+}
+
+QTableWidget#resultsTable::item:selected {
+    background-color: #123a37;
+    color: #f4f7fb;
+}
+
+QHeaderView::section {
+    background-color: #0b1220;
+    color: #7d8ba1;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 10px 8px;
+    border: none;
+    border-bottom: 2px solid #2dd4bf;
+}
+
+/* ---------- Diálogo de detalle ---------- */
+
+#metricBlock {
+    background-color: #0b1220;
+    border: 1px solid #22314a;
+    border-radius: 12px;
+}
+
+#componentRow {
+    background-color: #0b1220;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 10px;
+}
+
+QScrollBar::handle:vertical {
+    background: #26385a;
+    border-radius: 5px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #345078;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}

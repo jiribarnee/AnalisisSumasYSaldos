@@ -1,0 +1,31 @@
+# Entorno virtual y caché de Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Programas generados (pesan ~1 GB, no van en GitHub)
+build/
+dist/
+Programas/
+*.spec
+*.exe
+*.app
+*.zip
+
+# Datos reales de la empresa: NUNCA subirlos
+# (solo se permiten los archivos de ejemplo de data/sample)
+*.xlsx
+*.xls
+*.numbers
+*.csv
+!data/sample/*.xlsx
+
+# Reportes generados
+*.pdf
+
+# Editor / sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
